@@ -236,7 +236,6 @@ const initialRecipes = [
 ];
 
 // --- LOGIC ---
-
 function getRecipes() {
     // Check local storage. If version mismatch, Force Reload.
     const stored = localStorage.getItem(STORAGE_KEY);
