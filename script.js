@@ -136,7 +136,6 @@ const initialRecipes = [
         ingredients: ["Chicken", "Soy Sauce", "Mirin", "Sugar", "Ginger"] 
     },
 
-    // --- INDIA (Removed Butter Chicken, Dal Fry, Lamb Rogan Josh) ---
     { 
         id: 15, 
         title: "Vegetable Biryani", 
@@ -148,7 +147,7 @@ const initialRecipes = [
         ingredients: ["Basmati Rice", "Mixed Vegetables", "Biryani Spices", "Saffron", "Yogurt", "Fried Onions"] 
     },
 
-    // --- USA (Removed Cheeseburger, Key Lime Pie) ---
+
     { 
         id: 19, 
         title: "BBQ Ribs", 
@@ -224,10 +223,6 @@ const initialRecipes = [
         ingredients: ["Pork", "Pineapple", "Peppers", "Vinegar", "Sugar", "Ketchup"] 
     },
 
-    // --- THAILAND (Removed Pad Thai, Thai Green Curry) ---
-    // (All removed based on request)
-
-    // --- SPAIN (Removed Paella) ---
     { 
         id: 30, 
         title: "Spanish Tortilla", 
