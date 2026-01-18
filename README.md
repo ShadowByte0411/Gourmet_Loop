@@ -13,7 +13,7 @@ A modern, fully responsive Single Page Application (SPA) style recipe sharing pl
 * **Stable Assets:** Uses reliable image hosting (Wikimedia Commons) to ensure zero broken links.
 
 ##  Tech Stack
-* **Frontend:** HTML5, CSS3 (Variables, Flexbox, Grid)
-* **Scripting:** Vanilla JavaScript (ES6+)
+* **Frontend:** HTML5, CSS3 
+* **Scripting:** Vanilla JavaScript 
 * **Persistence:** Browser LocalStorage API
 * **Design:** Custom CSS 
