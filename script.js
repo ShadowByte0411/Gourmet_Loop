@@ -1,5 +1,4 @@
 const STORAGE_KEY = 'recipe_pro_v7'; 
-
 const initialRecipes = [
     // --- ITALY ---
     { 
