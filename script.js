@@ -1,6 +1,3 @@
-/* script.js */
-
-// *** CRITICAL UPDATE: Version v7 forces a clean load with broken items removed ***
 const STORAGE_KEY = 'recipe_pro_v7'; 
 
 const initialRecipes = [
