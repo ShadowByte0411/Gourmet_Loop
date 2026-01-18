@@ -1,0 +1,156 @@
+/* style.css */
+:root {
+    --primary: #ff6b6b;
+    --secondary: #ff8e53;
+    --dark: #1a1a2e;
+    --light: #f5f5f5;
+    --glass: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body {
+    background-color: #1a1a2e;
+    color: var(--light);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden; /* Prevents scrollbar from glow element */
+}
+
+/* --- MOUSE GLOW EFFECT --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Radial gradient follows the mouse variables set by JS */
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+        rgba(255, 107, 107, 0.1), 
+        transparent 40%
+    );
+    z-index: -1;
+    pointer-events: none; /* Lets you click through the glow */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.nav-links a { color: var(--light); text-decoration: none; margin-left: 2rem; font-weight: 500; transition: 0.3s; opacity: 0.8; }
+.nav-links a:hover { color: var(--primary); opacity: 1; }
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4); }
+
+/* Hero */
+.hero {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h1 { font-size: 5rem; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+
+/* Cards */
+.container { padding: 4rem 5%; max-width: 1400px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem; }
+
+.card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); border-color: var(--primary); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card-content { padding: 1.5rem; }
+.tag { background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; }
+
+/* Detail Lists */
+.ingredients-list, .method-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+}
+
+/* Ingredient Bullets */
+.ingredients-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex; align-items: center;
+}
+.ingredients-list li::before { content: "•"; color: var(--primary); margin-right: 10px; font-size: 1.5rem; }
+
+/* Method Steps */
+.method-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex; gap: 1rem;
+}
+.method-list span.step-num {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-width: 25px;
+}
+
+/* Reviews */
+.review-box {
+    background: rgba(255,255,255,0.03);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--secondary);
+}
+.review-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem; opacity: 0.7; }
+.review-text { font-style: italic; opacity: 0.9; }
+
+/* Forms */
+.form-container { max-width: 700px; margin: 0 auto; background: rgba(255, 255, 255, 0.03); padding: 3rem; border-radius: 20px; border: 1px solid var(--glass-border); }
+.form-group { margin-bottom: 2rem; }
+input, textarea, select { width: 100%; padding: 1rem; background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); border-radius: 10px; color: white; font-size: 1rem; }
+input:focus, textarea:focus { outline: none; border-color: var(--primary); }

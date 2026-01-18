@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GourmetLoop - Feed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="window.location.href='index.html'">GourmetLoop.</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="create.html" class="btn">+ New Recipe</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+            <h2 style="font-size:2rem; border-left: 5px solid var(--primary); padding-left:1rem;">Trending Recipes</h2>
+            
+            <select id="country-filter" style="width:200px; padding:0.8rem; background: var(--dark);">
+                <option value="All">All Flavors</option>
+                <option value="Italy">Italy</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Japan">Japan</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="France">France</option>
+                <option value="China">China</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Spain">Spain</option>
+            </select>
+        </div>
+
+        <div class="grid">
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

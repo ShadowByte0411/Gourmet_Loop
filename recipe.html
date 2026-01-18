@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="window.location.href='index.html'">GourmetLoop.</div>
+        <div class="nav-links">
+            <a href="feed.html">Back to Feed</a>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px;">
+        <div class="card" style="cursor: default;">
+            <img id="detail-img" src="" alt="Food" style="height: 400px;">
+            <div class="card-content">
+                <div id="detail-meta" style="margin-bottom:1rem; display:flex; gap:10px;"></div>
+                <h1 id="detail-title" style="font-size: 3rem; margin-bottom: 1rem;"></h1>
+                <p id="detail-desc" style="font-size: 1.2rem; opacity: 0.9;"></p>
+                
+                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin: 2rem 0;">
+
+                <h3>Ingredients</h3>
+                <ul id="detail-ingredients" class="ingredients-list">
+                    </ul>
+
+                <h3>Instructions</h3>
+                <p style="opacity:0.7; line-height:1.6;">
+                    1. Gather all ingredients listed above.<br>
+                    2. Prep vegetables and meat as required.<br>
+                    3. Cook according to standard techniques for this dish.<br>
+                    4. Serve hot and garnish with herbs.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-container" style="max-width: 100%; margin-top: 2rem;">
+            <h2>Reviews</h2>
+            <div id="reviews-container" style="margin: 1.5rem 0;"></div>
+
+            <form id="review-form" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                <div class="form-group">
+                    <textarea id="review-text" rows="3" placeholder="What did you think of this dish?" required></textarea>
+                </div>
+                <button type="submit" class="btn">Post Review</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
