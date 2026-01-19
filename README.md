@@ -1,4 +1,4 @@
-#  GourmetLoop - Professional Recipe Platform
+#  GourmetLoop - Professional Recipe Sharing Platform
 A modern, fully responsive Single Page Application (SPA) style recipe sharing platform built with **Vanilla JavaScript**. This project demonstrates advanced DOM manipulation, state management using LocalStorage, and premium UI/UX design principles like Glassmorphism and interactive glow effects.
 
 ##  Key Features
