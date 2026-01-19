@@ -16,4 +16,4 @@ A modern, fully responsive Single Page Application (SPA) style recipe sharing pl
 * **Frontend:** HTML5, CSS3 
 * **Scripting:** Vanilla JavaScript 
 * **Persistence:** Browser LocalStorage API
-* **Design:** Custom CSS 
+* **Design:** CSS 
